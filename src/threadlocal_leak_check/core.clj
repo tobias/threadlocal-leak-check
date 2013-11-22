@@ -23,7 +23,8 @@
     (ref-set r "whatever")))
   
   ;; exercise futures and agents, since they do binding conveyance
-  @(future-call (constantly 1))
+  @(future-call #(binding [*print-dup* false]
+                  nil))
   (send (agent nil) (constantly 1))
 
   ;; shutdown the agent pool, since leaving it up will definitely
