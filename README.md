@@ -21,13 +21,13 @@ loop. To run against an unpatched 1.5.1:
    
     $ ./bin/run.sh
     
-To run against a patched 1.6.0-master:
+To run against a local 1.6.0-master build:
 
-    $ ./bin/run.sh patched
+    $ ./bin/run.sh local
     
-This will use `[org.clojars.tcrawley/clojure "1.6.0-clearthreadlocals"]`, which is
-https://github.com/clojure/clojure/commit/ef00c7cffad10e6104d333f7f71a29163b06cd0a +
-the `threadlocal-removal-tcrawley-2013-06-14.diff` patch from CLJ-1125.
+To run against 1.6.0-alpha2:
+
+    $ ./bin/run.sh alpha2
 
 In addition to watching memory stats in the output of the script, you
 should also `tail -f target/tomcat/logs/catalina.<date>.log` to watch

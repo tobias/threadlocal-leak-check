@@ -41,9 +41,7 @@ if [ -z "$1" ]; then
     WAR_PATH="$TARGET_DIR/leak.war"
 else
     lein with-profile $1 ring uberwar leak.war
-    WAR_PATH="$TARGET_DIR/$1/leak.war"
-    # compile against 1.5.1, but remove it. If we exclude it away, something else pulls in 1.2.1
-    zip -d $WAR_PATH WEB-INF/lib/clojure-1.5.1.jar 
+    WAR_PATH="$TARGET_DIR/leak.war"
 fi
 
 i=1

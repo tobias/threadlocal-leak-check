@@ -8,4 +8,5 @@
   :plugins [[lein-ring "0.8.5"]]
   :ring {:handler threadlocal-leak-check.core/handler}
   :immutant {:context-path "/leak"}
-  :profiles {:patched {:dependencies [[org.clojars.tcrawley/clojure "1.6.0-clearthreadlocals"]]}})
+  :profiles {:local {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
+             :alpha2 {:dependencies [[org.clojure/clojure "1.6.0-alpha2"]]}})
