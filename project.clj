@@ -9,4 +9,5 @@
   :ring {:handler threadlocal-leak-check.core/handler}
   :immutant {:context-path "/leak"}
   :profiles {:local {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
-             :alpha2 {:dependencies [[org.clojure/clojure "1.6.0-alpha2"]]}})
+             :alpha2 {:dependencies [[org.clojure/clojure "1.6.0-alpha2"]]}
+             :rc1 {:dependencies [[org.clojure/clojure "1.6.0-RC1"]]}})
